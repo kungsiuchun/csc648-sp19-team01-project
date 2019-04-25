@@ -18,33 +18,34 @@
         <h6 class="title">Search result: {{ qCount }}</h6>
     </div>
     <hr/>
-
-    <!-- Search filter -->
-    <div class="text-black">
-        <form class="form-inline my-2 my-lg-0" action="/listings" class="search_form" id="search_form">
-            <div class="col-md-3">
-                <h6>Distance From SFSU: </h6>
-                <div class="custom-control-inline">
-                    <button  name="type" class="btn btn-outline-success my-2 my-sm-0" type="submit">
-                        <option value="">0-2 miles</option>
-                    </button>
-                    <button name="type" class="btn btn-outline-success my-2 my-sm-0" type="submit">
-                        <option value="apartment">2-4 miles</option>
-                    </button>
-                    <button  name="type" class="btn btn-outline-success my-2 my-sm-0" type="submit">
-                        <option value="house">4 miles or above</option>
-                    </button>
+                <!-- Search filter -->
+            <aside style="width: 100%" >
+                <div class="text-black product-widget">
+                    <form class="form-inline " action="/listings" class="search_form" id="search_form">
+                        <div class="rubberBand col">
+                            <h6 class="d-inline-block">Distance From SFSU:</h6>
+                            <div class="custom-control-inline">
+                                <button  name="type" class="btn btn-outline-success my-2 my-sm-0" type="submit">
+                                    <option value="">0-2 miles</option>
+                                </button>
+                                <button name="type" class="btn btn-outline-success my-2 my-sm-0" type="submit">
+                                    <option value="apartment">2-4 miles</option>
+                                </button>
+                                <button  name="type" class="btn btn-outline-success my-2 my-sm-0" type="submit">
+                                    <option value="house">4 miles or above</option>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    <hr/>
                 </div>
-            </div>
-        </form>
-        <hr/>
-        <!-- End Search Filter -->
-    </div>
+                </aside>
+                <!-- End Search Filter -->
 
-    <div class="offset-1">
-        <div class=" grid-wrapper">
+    <!-- listing loop --->
+            <div class="grid-wrapper">
             {% for listing in listings %}
-            <div class="card">
+            <div class="card zone">
                 <a href="/individualListing.html"><img class="card-img-top" src="../thumbnails/{{listing.thumbnail}}" style="width: 100%" width="420px" height="285px"  alt="{{listing.title}}"/></a>
                 <div style="color: #0b0b0b; font-size: 16px;">
                     <div class="text-lg-left  font-weight-bold">
@@ -55,15 +56,14 @@
                         <ul>Baths: {{ listing.baths }}</ul>
                         <ul>Rent: ${{ listing.rent }}/month</ul>
                         <ul>Distance from SFSU: {{ listing.distance }} miles</ul>
-                        <!--<li>Added: {{ listing.created }}</li>-->
                     </div>
                 </div>
             </div>
             {% else %}
             <li>No listings available...</li>
             {% endfor %}
+            </div>
         </div>
-    </div>
 </div>
 <br/>
 <!-- End Listing Loop -->
