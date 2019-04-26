@@ -206,3 +206,21 @@ footer {
 .card__image{
     border-radius: 3%;
 }
+
+/* Detail.html page css ******************/
+.detail_title h1{
+    text-align: center;
+}
+.box-1{
+    text-align: center;
+    text-decoration: underline;
+    float: right;
+    margin-right: 150px;
+    margin-top: 15px;
+    text-decoration: underline;
+    margin-bottom: 15px;
+}
+.detail_footer{
+    margin-top: 30px;
+    margin-bottom: 10px;
+}

@@ -46,7 +46,7 @@
             <div class="grid-wrapper">
             {% for listing in listings %}
             <div class="card zone">
-                <a href="/individualListing.html"><img class="card-img-top" src="../thumbnails/{{listing.thumbnail}}" style="width: 100%" width="420px" height="285px"  alt="{{listing.title}}"/></a>
+                <a href="/Listings/{{listing.id}}"><img class="card-img-top" src="../thumbnails/{{listing.thumbnail}}" style="width: 100%" width="420px" height="285px"  alt="{{listing.title}}"/></a>
                 <div style="color: #0b0b0b; font-size: 16px;">
                     <div class="text-lg-left  font-weight-bold">
                         <ul>Type: {{ listing.type }}</ul>
