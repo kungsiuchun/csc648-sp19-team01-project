@@ -206,3 +206,10 @@ footer {
 .card__image{
     border-radius: 3%;
 }
+
+.add {
+    text-align: center;
+}
+
+.add h1 {
+}
