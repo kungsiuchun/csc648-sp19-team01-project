@@ -509,3 +509,12 @@ footer {
     text-align: center;
 
 }
+
+.col-sm-8{
+    background-color:yellow;
+    height: 70px;
+}
+
+.col-sm-4{
+    background-color: blue;
+}
