@@ -35,7 +35,7 @@
             margin: auto;
             padding: 20px;
             border: 1px solid #888;
-            width: 80%;
+            width: 50%;
         }
 
         /* The Close Button */
@@ -64,14 +64,36 @@
             width:500px;
         }
         .no{margin-left: 41%;
-        margin-top: 5%}
+        margin-top: 2%}
 
         .footer{
-            margin-top: 15%;
+            margin-top: 17%;
         }
         .box{
             background-color: aqua;
             padding-bottom: 15px;
+        }
+        .close-button{
+            margin-left: 1160px;
+        }
+        .close-button:hover,
+        .close-button:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .close-button {
+            color: #aaaaaa;
+            float: right;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .icon{
+            margin-left: 550px;
+
+        }
+        .message-head{
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -207,8 +229,10 @@
 
     <!-- Modal content -->
     <div class="modal-content">
-        <span class="close">&times;</span>
-        <p>This Message Will Be Send To The Landlord Of The Listing You Just Viewed!</p>
+        <!--
+        <span class="close">&times;</span>-->
+        <button class="close-button">&times;</button>
+        <p class="message-head">This Message Will Be Send To The Landlord Of The Listing You Just Viewed!</p>
         <div>
             <label>First Name</label>
             <input type="text" name="first-name"
@@ -238,8 +262,9 @@
         </div>
         <br>
 
-        <input type="submit" name="submit" onclick="alert('Your Message Has Been Sent! Please Navigate back To The Home Page.')"
+        <input class="submit-button" type="submit" name="submit" onclick="alert('Your Message Has Been Sent! Please Navigate back To The Home Page.')"
                value="Submit">
+        <img class="icon" src="../images/icon.jpg" height="70px" width="70px" alt="dormy house">
         </form>
 
 
@@ -260,6 +285,8 @@
             // Get the <span> element that closes the modal
             var span = document.getElementsByClassName("close")[0];
 
+            var close = document.getElementsByClassName("close-button")[0];
+
             // When the user clicks the button, open the modal
             btn.onclick = function() {
                 modal.style.display = "block";
@@ -269,6 +296,11 @@
             span.onclick = function() {
                 modal.style.display = "none";
             }
+
+            close.onclick = function() {
+                modal.style.display = "none";
+            }
+
 
             // When the user clicks anywhere outside of the modal, close it
             window.onclick = function(event) {
