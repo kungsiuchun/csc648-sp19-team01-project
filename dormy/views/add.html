@@ -1,76 +1,80 @@
-{% include "layouts/navigation.html" %}
+<!-- RESPONSIVE HOMEPAGE -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Layout Master</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<!--<style>-->
-<!--    input, select {-->
-<!--        width: 100%;-->
-<!--        padding: 12px 20px;-->
-<!--        margin: 8px 0;-->
-<!--        display: inline-block;-->
-<!--        border: 1px solid #ccc;-->
-<!--        border-radius: 4px;-->
-<!--        box-sizing: border-box;-->
-<!--    }-->
+    <link rel="stylesheet" type="text/css" href="../css/template.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-<!--    input:focus {-->
-<!--        background-color: lightblue;-->
-<!--    }-->
 
-<!--    input[type=submit] {-->
-<!--        width: 100%;-->
-<!--        background-color: #af006b;-->
-<!--        color: white;-->
-<!--        padding: 14px 20px;-->
-<!--        margin: 8px 0;-->
-<!--        border: none;-->
-<!--        border-radius: 4px;-->
-<!--        cursor: pointer;-->
-<!--    }-->
+</head>
+<body>
 
-<!--    input[type=submit]:hover {-->
-<!--        background-color: #6904e9;-->
-<!--    }-->
 
-<!--    div {-->
-<!--        /*align-items: center;*/-->
-<!--        border-radius: 5px;-->
-<!--        /*background-color: #f2f2f2;*/-->
-<!--        padding: 20px;-->
-<!--    }-->
-<!--</style>-->
+{% include "layouts/homepageNav.html" %}
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-6">
-            <h1>Add New Listing</h1>
-            <form action="/listings" method="post" enctype="multipart/form-data">
-                <input type="text" name="title" placeholder="Title" required/>
-                <br />
-                <input type="text" name="address" placeholder="Address" required/>
-                <br />
-                <input type="number" name="beds" placeholder="Number of Beds" required/>
-                <br />
-                <input type="number" name="baths" placeholder="Number of Baths" required/>
-                <br />
-                <input type="number" name="rent" placeholder="Rent Per Month" required/>
-                <br />
-                <input type="number" name="distance" placeholder="Distance from SFSU (mi)" required/>
-                <br />
-                <select name="type" required>
-                    <option value="apartment">Apartment</option>
-                    <option value="house">House</option>
-                    <option value="condo">Condo</option>
-                </select>
-                <br />
-                <input type="file" name="thumbnail" required/>
-                <br />
-                <br />
-                <input type="submit" value="Add" />
-            </form>
-        </div>
-    </div>
-
+<div class="add">
+    <h1>Add New Listing</h1>
+    <form action="/listings" method="post" enctype="multipart/form-data">
+        <input type="text" name="title" placeholder="Title" required/>
+        <br/>
+        <input type="text" name="address" placeholder="Address" required/>
+        <br/>
+        <input type="number" name="beds" placeholder="Number of Beds" required/>
+        <br/>
+        <input type="number" name="baths" placeholder="Number of Baths" required/>
+        <br/>
+        <input type="number" name="rent" placeholder="Rent Per Month" required/>
+        <br/>
+        <input type="number" name="distance" placeholder="Distance from SFSU (mi)" required/>
+        <br/>
+        <select name="type" required>
+            <option value="apartment">Apartment</option>
+            <option value="house">House</option>
+            <option value="condo">Condo</option>
+        </select>
+        <br/>
+        <input style="margin-left: 160px" type="file" name="thumbnail" required/>
+        <br/>
+        <br/>
+        <input class="btn btn-outline-primary" style="margin-bottom: 270px" type="submit" value="Add"/>
+    </form>
 </div>
 
-{% include "layouts/footer.html" %}
 
-  
+<!-- <div class="box">
+  <div class="grid-wrappers" >
+
+  </div>
+  <img class="card__image" class="card bg-light mb-3" alt="Car" style="width: 100%" src="https://cdn.houseplansservices.com/product/nefd91a8br9itgmjos2jvtltac/w300x200.jpg?v=9">
+  <img  src="https://cdn.houseplansservices.com/product/nefd91a8br9itgmjos2jvtltac/w300x200.jpg?v=9">
+</div> -->
+<!-- <div class="box zone"><img src="./img/server_2_2.png">
+</div>
+<div class="box zone"><img src="./img/monitor_settings_2.png"></div>
+<div class="box zone"><img src="./img/server_3.png"></div>
+<div class="box zone"><img src="./img/data_storage_2_2.png"></div>
+<div class="box zone"><img src="./img/monitor_coding_2.png"></div> -->
+{% include "layouts/footer.html" %}
+</div>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+

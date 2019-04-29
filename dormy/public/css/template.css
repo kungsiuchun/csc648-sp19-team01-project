@@ -518,3 +518,35 @@ footer {
 .col-sm-4{
     background-color: blue;
 }
+
+/* Detail.html page css ******************/
+.detail_title h1{
+    text-align: center;
+}
+.box-1{
+    text-align: center;
+    text-decoration: underline;
+    float: right;
+    margin-right: 150px;
+    margin-top: 15px;
+    text-decoration: underline;
+    margin-bottom: 15px;
+    line-height: 15px;
+
+}
+.detail_footer{
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.add {
+    text-align: center;
+}
+/* .modal-content{
+    width: 50%;
+    height: 50%;
+    background-color: blue;
+} */
+
+
+
