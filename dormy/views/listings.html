@@ -13,61 +13,82 @@
 <!-- SECTION -->
 
 
-<div class="d-inline position-relative container">
-    <div class="text-black col-md-3">
-        <h6 class="title">Search result: {{ qCount }}</h6>
+<div class="dropdown">
+    <button class="btn dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Sort by:
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+        <button class="dropdown-item" type="button">Price</button>
+        <button class="dropdown-item" type="button">Distance</button>
+        <button class="dropdown-item" type="button">Newest</button>
     </div>
-    <hr/>
-                <!-- Search filter -->
-            <aside style="width: 100%" >
-                <div class="text-black product-widget">
-                    <form class="form-inline " action="/listings" class="search_form" id="search_form">
-                        <div class="rubberBand col">
-                            <h6 class="d-inline-block">Distance From SFSU:</h6>
-                            <div class="custom-control-inline">
-                                <button  name="type" class="btn btn-outline-success my-2 my-sm-0" type="submit">
-                                    <option value="">0-2 miles</option>
-                                </button>
-                                <button name="type" class="btn btn-outline-success my-2 my-sm-0" type="submit">
-                                    <option value="apartment">2-4 miles</option>
-                                </button>
-                                <button  name="type" class="btn btn-outline-success my-2 my-sm-0" type="submit">
-                                    <option value="house">4 miles or above</option>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                    <hr/>
-                </div>
-                </aside>
-                <!-- End Search Filter -->
-
-    <!-- listing loop --->
-            <div class="grid-wrapper">
-            {% for listing in listings %}
-            <div class="card zone">
-                <a href="/Listings/{{listing.id}}"><img class="card-img-top" src="../thumbnails/{{listing.thumbnail}}" style="width: 100%" width="420px" height="285px"  alt="{{listing.title}}"/></a>
-                <div style="color: #0b0b0b; font-size: 16px;">
-                    <div class="text-lg-left  font-weight-bold">
-                        <ul>Type: {{ listing.type }}</ul>
-                        <ul>Title: {{ listing.title }}</ul>
-                        <ul>Address: {{ listing.address }}</ul>
-                        <ul>Beds: {{ listing.beds }}</ul>
-                        <ul>Baths: {{ listing.baths }}</ul>
-                        <ul>Rent: ${{ listing.rent }}/month</ul>
-                        <ul>Distance from SFSU: {{ listing.distance }} miles</ul>
-                    </div>
-                </div>
-            </div>
-            {% else %}
-            <li>No listings available...</li>
-            {% endfor %}
-            </div>
+    <div style="display: inline-block" class="offset-9 text-md-right">
+        <div class="text-black ">
+            <h6 class="title">Search result: {{ qCount }}</h6>
         </div>
+    </div>
+</div>
+
+
+
+<div class="zone blue grid-wrapper" >
+    {% for listing in listings %}
+    <div class="card bg-light mb-3" alt="Car" style="width: 100%" class="card border-primary mb-3" style="max-width: 18rem;">
+        <a style="text-decoration:none" href="/Listings/{{listing.id}}" class="card-body text-primary">
+            <h5 class="top-tittle">{{ listing.title }}</h5>
+            <img class="card__images" class="card bg-light mb-3" alt="Car" style="width: 100%" width="420px" height="285px"   src="/thumbnails/{{listing.thumbnail}}">
+           <br/>
+            <div class="text-black">
+                <h6 class="price">${{ listing.rent }}/Mo </h6>
+                <h6 class="address">Address: {{ listing.address }}</h6>
+                <h6 class="type-item">Distance from SFSU: {{ listing.distance }} miles</h6>
+                <h6 class="text-lg-right">{{ listing.type }}</h6>
+            </div>
+
+        </a>
+    </div>
+    {% else %}
+    <p>No listings found...</p>
+    {% endfor %}
+</div>
+            <!--<div class="zone grid-wrapper">-->
+            <!--{% for listing in listings %}-->
+            <!--<div class="card bg-light mb-3">-->
+                <!--<a href="/Listings/{{listing.id}}"><img class="card-img-top" src="../thumbnails/{{listing.thumbnail}}" style="width: 100%" width="420px" height="285px"  alt="{{listing.title}}"/></a>-->
+                <!--<div style="color: #0b0b0b; font-size: 16px;">-->
+                    <!--<div class="text-lg-left  font-weight-bold">-->
+                        <!--<ul>Type: {{ listing.type }}</ul>-->
+                        <!--<ul>Title: {{ listing.title }}</ul>-->
+                        <!--<ul>Address: {{ listing.address }}</ul>-->
+                        <!--<ul>Beds: {{ listing.beds }}</ul>-->
+                        <!--<ul>Baths: {{ listing.baths }}</ul>-->
+                        <!--<ul>Rent: ${{ listing.rent }}/month</ul>-->
+                        <!--<ul>Distance from SFSU: {{ listing.distance }} miles</ul>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--{% else %}-->
+            <!--<li>No listings available...</li>-->
+            <!--{% endfor %}-->
+            <!--</div>-->
 </div>
 <br/>
 <!-- End Listing Loop -->
-
+<!-- PAGING -->
+<nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+        <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1">Previous</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+            <a class="page-link" href="#">Next</a>
+        </li>
+    </ul>
+</nav>
+<!-- End PAGEING -->
 
 
 
