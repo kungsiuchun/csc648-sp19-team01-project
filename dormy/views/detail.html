@@ -1,0 +1,165 @@
+
+
+<!-- RESPONSIVE HOMEPAGE -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Individual Listing</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" type="text/css" href="../css/template.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+</head>
+<body>
+{% include "layouts/homepageNav.html" %}
+
+</div>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<header class="detail_title">
+    <h1>Listing Name</h1>
+</header>
+<div class="image">
+    <img src="/thumbnails/{{listing.thumbnail}}" height="550px" width="700px" alt="dormy house">
+
+    <div class="box-1">
+        <h3>Description</h3>
+        <ul class="listing-description">
+
+            <li>Type: {{ listing.type }}</li>
+            <li>Title: {{ listing.title }}</li>
+            <li>Address: {{ listing.address }}</li>
+            <li>Beds: {{ listing.beds }}</li>
+            <li>Baths: {{ listing.baths }}</li>
+            <li>Rent: ${{ listing.rent }}/month</li>
+            <li>Distance from SFSU: {{ listing.distance }} miles</li>
+            <li>Added: {{ listing.created }}</li>
+        </ul>
+
+
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+
+        <form action="../images/contactLandlord.html">
+            <input type="submit" value="Contact Landlord" />
+        </form>
+
+
+    </div>
+
+
+
+
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<div>
+
+</div>{% include "layouts/footer.html" %}
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+
+
+
+
+<!--
+<ul>
+    <li>Thumbnail: <img src="/thumbnails/{{listing.thumbnail}}" width="500px" height="300px"  alt="{{listing.title}}"/></li>
+    <li>Type: {{ listing.type }}</li>
+    <li>Title: {{ listing.title }}</li>
+    <li>Address: {{ listing.address }}</li>
+    <li>Beds: {{ listing.beds }}</li>
+    <li>Baths: {{ listing.baths }}</li>
+    <li>Rent: ${{ listing.rent }}/month</li>
+    <li>Distance from SFSU: {{ listing.distance }} miles</li>
+    <li>Added: {{ listing.created }}</li>
+</ul>
+
+
+
+<header class="detail_title">
+    <h1>Listing Name</h1>
+</header>
+<div class="image">
+    <img src="../images/house.png" alt="dormy house">
+
+    <div class="box-1">
+        <h3>Description</h3>
+        <ul class="listing-description">
+
+            <li>Type: {{ listing.type }}</li>
+            <li>Title: {{ listing.title }}</li>
+            <li>Address: {{ listing.address }}</li>
+            <li>Beds: {{ listing.beds }}</li>
+            <li>Baths: {{ listing.baths }}</li>
+            <li>Rent: ${{ listing.rent }}/month</li>
+            <li>Distance from SFSU: {{ listing.distance }} miles</li>
+            <li>Added: {{ listing.created }}</li>
+        </ul>
+
+
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+
+        <form action="../images/contactLandlord.html">
+            <input type="submit" value="Contact Landlord" />
+        </form>
+        <!--
+        <a class="button" href="">Contact Landlord</a>
+
+</div>
+
+
+
+
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<div>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+
+<!-- <ul>
+    <li>Thumbnail: <img src="/thumbnails/{{listing.thumbnail}}" width="500px" height="300px"  alt="{{listing.title}}"/></li>
+    <li>Type: {{ listing.type }}</li>
+    <li>Title: {{ listing.title }}</li>
+    <li>Address: {{ listing.address }}</li>
+    <li>Beds: {{ listing.beds }}</li>
+    <li>Baths: {{ listing.baths }}</li>
+    <li>Rent: ${{ listing.rent }}/month</li>
+    <li>Distance from SFSU: {{ listing.distance }} miles</li>
+    <li>Added: {{ listing.created }}</li>
+</ul>
+-->
